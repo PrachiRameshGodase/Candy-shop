@@ -10,7 +10,7 @@ function Availablecandies() {
     const [candyList,setCandyList]=useState([])
 
     async function fetchItems() {
-        const response = await axios.get("https://crudcrud.com/api/836784d939394b7085392d04d2f93722/candyshop");
+        const response = await axios.get("https://crudcrud.com/api/9abad6ba985e48069f1845d09124a1dd/sh");
         console.log(response.data)
         const candyList = response.data.map((item) => {
           return {
@@ -29,7 +29,7 @@ function Availablecandies() {
 
       useEffect(() => {   
         fetchItems();
-       }, [fetchItems]);
+       }, []);
       
 
     const candiesList=<ul>

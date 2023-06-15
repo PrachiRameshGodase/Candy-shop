@@ -5,7 +5,7 @@ import CartContext from '../../../store/cart-context'
 
 function CandyItem(props) {
     const cartCtx=useContext(CartContext)
-    const price =`$${props.price}`
+    const price =`₹${props.price}`
 
     const addItemToCartHandler=amount=>{
         cartCtx.addItem({

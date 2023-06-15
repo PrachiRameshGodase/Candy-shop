@@ -34,7 +34,7 @@ const CandyForm=(props) =>{
         // props.onAddItem(enteredData.name, enteredData.description, enteredData.price);
 
         try{
-        const response=await axios.post("https://crudcrud.com/api/836784d939394b7085392d04d2f93722/candyshop",enteredData)
+        const response=await axios.post("https://crudcrud.com/api/9abad6ba985e48069f1845d09124a1dd/sh",enteredData)
         console.log(response.data)
         }catch(error){
             console.log('AxiosError:', error)
