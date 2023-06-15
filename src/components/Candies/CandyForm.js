@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import classes from "./CandyForm.module.css"
+import axios from "axios"
 
 
 
@@ -21,7 +22,7 @@ const CandyForm=(props) =>{
     }
 
     
-    const submitHandler=(event)=>{
+    async function submitHandler(event){
         event.preventDefault();
 
         const enteredData={
@@ -30,7 +31,14 @@ const CandyForm=(props) =>{
             price:enteredPrice,
             
         }
-        props.onAddItem(enteredData.name, enteredData.description, enteredData.price);
+        // props.onAddItem(enteredData.name, enteredData.description, enteredData.price);
+
+        try{
+        const response=await axios.post("https://crudcrud.com/api/836784d939394b7085392d04d2f93722/candyshop",enteredData)
+        console.log(response.data)
+        }catch(error){
+            console.log('AxiosError:', error)
+        }
 
         setEnteredName("");
         setEnteredDescription("");
