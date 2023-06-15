@@ -9,9 +9,9 @@ function Availablecandies(props) {
             <CandyItem key={candy.id}
                 id={candy.id}
                 name={candy.name}
-                description={candy.price}
+                description={candy.description}
                 price={candy.price}
-            />
+                ></CandyItem>
         ))}
     </ul>
   return (
